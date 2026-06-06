@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameAware – Kampanye Edukasi Kecanduan Roblox</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Poppins + Syne untuk heading besar -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <!-- Chart.js untuk statistik -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <!-- Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🎮</span>
+      <span class="brand-text">Game<span class="accent">Aware</span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#screening">Tes Kecanduan</a></li>
+      <li><a href="#statistik">Statistik</a></li>
+      <li><a href="#tips">Tips</a></li>
+    </ul>
+    <button class="nav-cta" onclick="scrollToSection('screening')">Mulai Tes</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <!-- Decorative blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Floating pixel blocks (Roblox-style, original) -->
+    <div class="pixel-block pb-1"></div>
+    <div class="pixel-block pb-2"></div>
+    <div class="pixel-block pb-3"></div>
+    <div class="pixel-block pb-4"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">⚠️ Kampanye Kesadaran Digital 2025</div>
+      <h1 class="hero-title">
+        Apakah Kamu<br />
+        <span class="gradient-text">Mulai Kecanduan</span><br />
+        Roblox?
+      </h1>
+      <p class="hero-subtitle">
+        Kecanduan game bisa terjadi tanpa disadari. Kenali tanda-tandanya sejak dini,
+        jaga keseimbangan hidupmu, dan tetap produktif.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="scrollToSection('screening')">
+          <i class="fas fa-clipboard-check"></i> Tes Sekarang — Gratis
+        </button>
+        <button class="btn-ghost" onclick="scrollToSection('tentang')">
+          Pelajari Lebih Lanjut <i class="fas fa-arrow-down"></i>
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-pill"><strong>70%</strong> remaja bermain >3 jam/hari</div>
+        <div class="stat-pill"><strong>1 dari 3</strong> menunjukkan tanda kecanduan</div>
+        <div class="stat-pill"><strong>Tes 2 Menit</strong> untuk cek kondisimu</div>
+      </div>
+    </div>
+
+    <!-- Hero illustration: pixelated avatar style -->
+    <div class="hero-illustration">
+      <div class="avatar-scene">
+        <div class="av-head"></div>
+        <div class="av-body"></div>
+        <div class="av-arm-l"></div>
+        <div class="av-arm-r"></div>
+        <div class="av-leg-l"></div>
+        <div class="av-leg-r"></div>
+        <div class="av-controller">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <div class="av-bubble">😴 1 lagi...</div>
+        <div class="av-shadow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TENTANG KECANDUAN ===== -->
+  <section class="section tentang" id="tentang">
+    <div class="container">
+      <div class="section-label">📚 Edukasi</div>
+      <h2 class="section-title">Memahami Kecanduan Game</h2>
+      <p class="section-sub">Kecanduan game adalah kondisi nyata yang diakui WHO. Yuk, kenali lebih dalam.</p>
+
+      <!-- Definisi -->
+      <div class="definition-card">
+        <div class="def-icon">🧠</div>
+        <div class="def-content">
+          <h3>Apa Itu Kecanduan Game?</h3>
+          <p>
+            Kecanduan game (Gaming Disorder) adalah pola perilaku bermain game yang ditandai dengan
+            hilangnya kendali, prioritas bermain melebihi kepentingan lain, dan berlanjut meskipun
+            berdampak negatif. WHO resmi mengakuinya dalam ICD-11 sejak 2022.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tanda-tanda kecanduan -->
+      <h3 class="subsection-title">🚩 Tanda-Tanda Kecanduan Roblox</h3>
+      <div class="cards-grid">
+        <div class="info-card" data-delay="0">
+          <div class="card-icon-wrap red">⏰</div>
+          <h4>Waktu Tak Terkontrol</h4>
+          <p>Bermain lebih dari 5 jam sehari dan sulit berhenti meski sudah waktunya.</p>
+        </div>
+        <div class="info-card" data-delay="100">
+          <div class="card-icon-wrap orange">😤</div>
+          <h4>Mudah Marah</h4>
+          <p>Merasa cemas, marah, atau gelisah ketika tidak bisa mengakses game.</p>
+        </div>
+        <div class="info-card" data-delay="200">
+          <div class="card-icon-wrap purple">📱</div>
+          <h4>Pikiran Selalu di Game</h4>
+          <p>Saat tidak main pun, pikiran terus memikirkan game atau rencana bermain.</p>
+        </div>
+        <div class="info-card" data-delay="300">
+          <div class="card-icon-wrap blue">📚</div>
+          <h4>Prestasi Menurun</h4>
+          <p>Tugas sekolah sering tertunda atau tidak selesai karena prioritas bermain game.</p>
+        </div>
+        <div class="info-card" data-delay="400">
+          <div class="card-icon-wrap green">👥</div>
+          <h4>Isolasi Sosial</h4>
+          <p>Lebih memilih bermain sendirian daripada bersosialisasi dengan teman dan keluarga.</p>
+        </div>
+        <div class="info-card" data-delay="500">
+          <div class="card-icon-wrap pink">🌙</div>
+          <h4>Gangguan Tidur</h4>
+          <p>Begadang demi main game, tidur larut malam dan susah bangun pagi hari.</p>
+        </div>
+      </div>
+
+      <!-- Dampak -->
+      <h3 class="subsection-title">⚡ Dampak Kecanduan Game</h3>
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-icon">🏫</div>
+          <h4>Akademik</h4>
+          <ul>
+            <li>Nilai turun drastis</li>
+            <li>Sulit fokus di kelas</li>
+            <li>PR sering tidak dikerjakan</li>
+          </ul>
+        </div>
+        <div class="impact-item">
+          <div class="impact-icon">😴</div>
+          <h4>Kesehatan Fisik</h4>
+          <ul>
+            <li>Kurang tidur kronis</li>
+            <li>Nyeri mata dan punggung</li>
+            <li>Pola makan tidak teratur</li>
+          </ul>
+        </div>
+        <div class="impact-item">
+          <div class="impact-icon">💬</div>
+          <h4>Sosial</h4>
+          <ul>
+            <li>Hubungan dengan keluarga renggang</li>
+            <li>Kehilangan teman nyata</li>
+            <li>Sulit berempati</li>
+          </ul>
+        </div>
+        <div class="impact-item">
+          <div class="impact-icon">🧠</div>
+          <h4>Mental</h4>
+          <ul>
+            <li>Kecemasan & depresi</li>
+            <li>Emosi tidak stabil</li>
+            <li>Rendah diri tanpa game</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCREENING TEST ===== -->
+  <section class="section screening" id="screening">
+    <div class="blob blob-s1"></div>
+    <div class="blob blob-s2"></div>
+    <div class="container">
+      <div class="section-label">🔍 Self-Screening</div>
+      <h2 class="section-title">Tes Kecanduan Roblox</h2>
+      <p class="section-sub">Jawab 10 pertanyaan berikut dengan jujur. Hasilnya hanya untukmu, tidak disimpan ke mana pun.</p>
+
+      <div class="test-wrapper" id="testWrapper">
+        <!-- Progress bar -->
+        <div class="progress-container">
+          <div class="progress-info">
+            <span id="questionCounter">Pertanyaan 1 dari 10</span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- Questions Form -->
+        <form id="screeningForm" onsubmit="return false;">
+          <!-- Pertanyaan akan di-generate oleh JavaScript -->
+        </form>
+
+        <!-- Navigation buttons -->
+        <div class="test-navigation">
+          <button class="btn-nav prev" id="prevBtn" onclick="prevQuestion()" disabled>
+            <i class="fas fa-chevron-left"></i> Sebelumnya
+          </button>
+          <button class="btn-nav next" id="nextBtn" onclick="nextQuestion()">
+            Selanjutnya <i class="fas fa-chevron-right"></i>
+          </button>
+          <button class="btn-submit" id="submitBtn" onclick="submitTest()" style="display:none;">
+            <i class="fas fa-paper-plane"></i> Lihat Hasil
+          </button>
+        </div>
+      </div>
+
+      <!-- Hasil Tes -->
+      <div class="result-wrapper" id="resultWrapper" style="display:none;">
+        <div class="result-card" id="resultCard">
+          <div class="result-icon" id="resultIcon"></div>
+          <div class="result-score-wrap">
+            <div class="result-score-label">Skor Kamu</div>
+            <div class="result-score" id="resultScore">0</div>
+            <div class="result-score-max">dari 20</div>
+          </div>
+          <h3 class="result-category" id="resultCategory"></h3>
+          <p class="result-desc" id="resultDesc"></p>
+          <div class="result-tips" id="resultTips"></div>
+          <div class="result-actions">
+            <button class="btn-primary" onclick="resetTest()">
+              <i class="fas fa-redo"></i> Tes Ulang
+            </button>
+            <button class="btn-ghost" onclick="scrollToSection('tips')">
+              <i class="fas fa-lightbulb"></i> Lihat Tips
+            </button>
+          </div>
+          <p class="result-disclaimer">⚠️ Hasil ini bukan diagnosis medis. Konsultasikan dengan profesional jika merasa khawatir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATISTIK ===== -->
+  <section class="section statistik" id="statistik">
+    <div class="container">
+      <div class="section-label">📊 Data & Fakta</div>
+      <h2 class="section-title">Statistik Kecanduan Game Remaja</h2>
+      <p class="section-sub">Data dummy representatif berdasarkan berbagai studi global tentang kebiasaan bermain game remaja.</p>
+
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h4>Persentase Remaja yang Bermain Game</h4>
+          <canvas id="chartGamer"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>Rata-rata Jam Bermain per Hari</h4>
+          <canvas id="chartHours"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>Dampak pada Kualitas Tidur</h4>
+          <canvas id="chartSleep"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>Dampak pada Nilai Akademik</h4>
+          <canvas id="chartAcademic"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIPS ===== -->
+  <section class="section tips" id="tips">
+    <div class="container">
+      <div class="section-label">💡 Solusi</div>
+      <h2 class="section-title">Tips Mengurangi Kecanduan</h2>
+      <p class="section-sub">Langkah-langkah praktis yang bisa kamu mulai hari ini juga.</p>
+
+      <div class="tips-grid">
+        <div class="tip-card" data-num="01">
+          <div class="tip-header">
+            <div class="tip-icon blue">⏱️</div>
+            <span class="tip-num">01</span>
+          </div>
+          <h4>Batasi Screen Time</h4>
+          <p>Tetapkan batas bermain maksimal 1–2 jam per hari. Gunakan timer atau fitur kontrol orang tua di perangkat.</p>
+          <div class="tip-tag">Prioritas Tinggi</div>
+        </div>
+        <div class="tip-card" data-num="02">
+          <div class="tip-header">
+            <div class="tip-icon purple">📅</div>
+            <span class="tip-num">02</span>
+          </div>
+          <h4>Buat Jadwal Belajar</h4>
+          <p>Selesaikan tugas dan belajar dulu sebelum bermain. Jadikan game sebagai reward, bukan prioritas utama.</p>
+          <div class="tip-tag">Produktivitas</div>
+        </div>
+        <div class="tip-card" data-num="03">
+          <div class="tip-header">
+            <div class="tip-icon green">🏃</div>
+            <span class="tip-num">03</span>
+          </div>
+          <h4>Aktivitas Offline</h4>
+          <p>Isi waktu luang dengan olahraga, hobi kreatif, atau komunitas. Temukan kesenangan di dunia nyata.</p>
+          <div class="tip-tag">Kesehatan</div>
+        </div>
+        <div class="tip-card" data-num="04">
+          <div class="tip-header">
+            <div class="tip-icon orange">🌙</div>
+            <span class="tip-num">04</span>
+          </div>
+          <h4>Tidur Teratur</h4>
+          <p>Matikan semua layar minimal 1 jam sebelum tidur. Tidur cukup 8–9 jam untuk remaja usia sekolah.</p>
+          <div class="tip-tag">Kesehatan</div>
+        </div>
+        <div class="tip-card" data-num="05">
+          <div class="tip-header">
+            <div class="tip-icon pink">👥</div>
+            <span class="tip-num">05</span>
+          </div>
+          <h4>Perkuat Hubungan Sosial</h4>
+          <p>Luangkan waktu bersama keluarga dan teman. Hubungan nyata jauh lebih bermakna dari virtual.</p>
+          <div class="tip-tag">Sosial</div>
+        </div>
+        <div class="tip-card" data-num="06">
+          <div class="tip-header">
+            <div class="tip-icon teal">💬</div>
+            <span class="tip-num">06</span>
+          </div>
+          <h4>Cari Bantuan Profesional</h4>
+          <p>Jika kecanduan sudah parah, jangan malu untuk berkonsultasi dengan psikolog atau konselor sekolah.</p>
+          <div class="tip-tag">Kesehatan Mental</div>
+        </div>
+      </div>
+
+      <!-- CTA untuk orang tua -->
+      <div class="parent-cta">
+        <div class="parent-cta-icon">👨‍👩‍👧</div>
+        <div class="parent-cta-content">
+          <h3>Untuk Orang Tua</h3>
+          <p>Komunikasi terbuka adalah kunci. Bukan melarang, tapi membimbing. Tetapkan aturan bersama dan jadilah contoh penggunaan gadget yang sehat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-row">
+          <span class="brand-icon">🎮</span>
+          <span class="brand-text-footer">Game<span class="accent">Aware</span></span>
+        </div>
+        <p>Kampanye edukasi digital untuk remaja dan orang tua Indonesia dalam menghadapi tantangan kecanduan game.</p>
+        <div class="socials">
+          <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-btn" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="#tentang">Tentang Kecanduan</a></li>
+          <li><a href="#screening">Tes Kecanduan</a></li>
+          <li><a href="#statistik">Statistik</a></li>
+          <li><a href="#tips">Tips & Solusi</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Kontak</h5>
+        <ul>
+          <li><i class="fas fa-envelope"></i> info@gameaware.id</li>
+          <li><i class="fas fa-phone"></i> (021) 555-0123</li>
+          <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GameAware. Dibuat dengan ❤️ untuk kesehatan digital remaja Indonesia.</p>
+      <p class="disclaimer">
+        ⚠️ <strong>Disclaimer:</strong> Website ini hanya untuk keperluan edukasi dan kesadaran masyarakat.
+        Hasil tes screening bukan merupakan diagnosis medis atau psikologis resmi.
+        Jika membutuhkan bantuan profesional, konsultasikan dengan dokter atau psikolog terpercaya.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
